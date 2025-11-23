@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
 body {
-  background: #0A0A0A; /* MARTX deep black */
-  color: #FFFFFF; /* Pure white text */
+  background: #0a0a0a; /* MARTX deep black */
+  color: #ffffff; /* Pure white text */
+  background: linear-gradient(to right, #000000 0%, #434343 100%);
+  background-attachment: fixed;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(6px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulseGlow {
-  0% { opacity: 1; }
-  50% { opacity: 0.4; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }

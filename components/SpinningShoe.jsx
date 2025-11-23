@@ -3,25 +3,25 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
-// function ShoeModel() {
-//   const { scene } = useGLTF("/Nike.glb");
-
-//   scene.position.set(0, -0.5, 0);
-
-//   return <primitive object={scene} scale={11} />;
-// }
-
 function ShoeModel() {
   const { scene } = useGLTF("/Nike.glb");
 
-  useFrame(({ clock }) => {
-    const t = clock.getElapsedTime();
-    scene.rotation.y = t * 0.2; // Regular rotation
-    scene.rotation.x = Math.sin(t * 0.8) * 0.15; // Rocking motion
-  });
+  scene.position.set(0, -0.5, 0);
 
-  return <primitive object={scene} scale={11} position={[0, -0.5, 0]} />;
+  return <primitive object={scene} scale={11} />;
 }
+
+// function ShoeModel() {
+//   const { scene } = useGLTF("/Nike.glb");
+
+//   useFrame(({ clock }) => {
+//     const t = clock.getElapsedTime();
+//     scene.rotation.y = t * 0.2; // Regular rotation
+//     scene.rotation.x = Math.sin(t * 0.8) * 0.15; // Rocking motion
+//   });
+
+//   return <primitive object={scene} scale={11} position={[0, -0.5, 0]} />;
+// }
 
 export default function SpinningShoe() {
   return (

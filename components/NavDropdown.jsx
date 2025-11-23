@@ -33,7 +33,9 @@ export default function NavDropdown({ open, items, setHoveredModal }) {
       style={{
         overflow: "hidden",
         height,
-        backgroundColor: "black",
+        backgroundColor: "rgba(0,0,0,0.4)", // bg-black/70
+        backdropFilter: "blur(12px)", // backdrop-blur-md
+        WebkitBackdropFilter: "blur(12px)",
       }}
     >
       {/* Animated top border (makes it look like navbar opens its mouth) */}

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geist.className} bg-[#0A0A0A] text-white`}
+        className={`${geist.className} bg-[#0A0A0A] text-white `}
       >
         <Navbar />
         {children}
