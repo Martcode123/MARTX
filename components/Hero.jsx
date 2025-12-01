@@ -1,5 +1,36 @@
 import { Button } from "@mui/material";
 import SpinningShoe from "./SpinningShoe";
+const heroTexts = [
+  {
+    title: "THE NEW ORDER",
+    subtitle: "Unauthorized entry detected. Proceed only if you’re ready to ascend.",
+    button: "ENTER"
+  },
+  {
+    title: "WELCOME, INITIATE",
+    subtitle: "Your induction begins with the //first collection. Study each artifact carefully.",
+    button: "PROCEED"
+  },
+  {
+    title: "THE VOID IS CALLING",
+    subtitle: "Sink into the aesthetic. Lose your identity. Find the brand.",
+    button: "DESCEND"
+  },
+  {
+    title: "IF LOOKS COULD KILL",
+    subtitle: "Cold silhouettes. Empty halls. Archive pieces designed to haunt.",
+    button: "STEP INSIDE"
+  },
+  {
+    title: "CURATED FOR THE FEW",
+    subtitle: "Minimal forms. Sharp construction. A new standard of cold luxury.",
+    button: "VIEW COLLECTION"
+  }
+];
+
+const random = heroTexts[Math.floor(Math.random() * heroTexts.length)];
+
+
 export default function hero() {
   return (
     <div className="bg-[#0A0A0A] flex items-center justify-between h-screen px-45">
@@ -18,11 +49,10 @@ export default function hero() {
             NEW COLLECTION
           </p>
           <span className="text-7xl font-bold my-4 tracking-wider block">
-            ELEVATE YOUR STYLE
+            {random.title}
           </span>
           <span className="tracking-wide block pb-5">
-            Discover the latest in modern apparel and accessories. Step up your
-            fashion game with our premium collections.
+            {random.subtitle}
           </span>
           <div className="w-px h-10 bg-white/5"></div>
           <div
@@ -50,7 +80,7 @@ pointer-events-none"
                 },
               }}
             >
-              SHOP NOW
+              {random.button}
             </Button>
           </div>
         </div>
